@@ -1,0 +1,13 @@
+<link rel="manifest" href="manifest.webmanifest" />
+<script>
+/*Service Worker*/
+if ('serviceWorker' in navigator) {
+	console.log('Зарегистрирован: ');
+	navigator.serviceWorker.register('/sw.js')
+	.then(function(reg){
+		console.log('Да', reg);
+	}).catch(function(err) {
+		console.log('Нет', err)
+	});
+}
+</script>
